@@ -1,0 +1,70 @@
+.filter__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.filter__item {
+  display: inline-block;
+  margin: 0.25em;
+}
+
+.filter__item input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.filter__item input[type="checkbox"] ~ label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 1.5em;
+  border: 2px solid var(--background-accent-color);
+  border-left-width: 0;
+  transition: box-shadow 0.15s ease-in-out;
+  margin: 1px;
+  /* espacement => 3px 3px 3px 1px */
+  /* tout => 2px border, 1px margin */
+  /* left => 1px margin */
+}
+.filter__item input[type="checkbox"]:checked ~ label {
+  box-shadow: 0 0 0.5em var(--primary-color);
+  border-width: 0;
+  margin: 3px;
+  margin-left: 1px;
+  /* espacement => 3px 3px 3px 1px */
+  /* tout => 3px margin */
+  /* left => 1px margin */
+}
+
+.filter__item input[type="checkbox"]:focus ~ label,
+.filter__item input[type="checkbox"] ~ label:hover {
+  border: 1px solid var(--primary-color);
+  margin: 2px;
+  margin-left: 0;
+  /* espacement => 3px 3px 3px 1px */
+  /* tout => 1px border, 2px margin */
+  /* left => 1px border */
+}
+.filter__item input[type="checkbox"]:checked:focus ~ label,
+.filter__item input[type="checkbox"]:checked ~ label:hover {
+  margin: 2px;
+  margin-left: 0;
+  /* espacement => 3px 3px 3px 1px */
+  /* tout => 1px border (focus/hover), 2px margin */
+  /* left => 1px border (focus/hover) */
+}
+
+.filter__icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.filter__text {
+  padding: 0 0.75em;
+}

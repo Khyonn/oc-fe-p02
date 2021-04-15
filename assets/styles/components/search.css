@@ -1,0 +1,51 @@
+.search {
+  display: flex;
+  height: 3em;
+  max-width: 25em;
+}
+.search__location,
+.search__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search__input {
+  flex: 1;
+  border: 1px solid var(--background-accent-color);
+  border-left: none;
+  border-right: none;
+  padding: 1px 1em;
+  min-width: 10em; /* permet de saisir à minima 15 car. + évite de réduire le bouton de recherche  */
+  font-weight: bold;
+  font-size: 1em;
+}
+.search__input:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+.search__location {
+  min-width: 3em;
+  background-color: var(--background-accent-color);
+  border-radius: 0.75em 0 0 0.75em;
+}
+.search__button {
+  min-width: 4em;
+  padding: 0 1em;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  border-radius: 0 0.75em 0.75em 0;
+}
+.search__button-label {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+@media screen and (max-width: 575px) {
+  .search__button--rounded-sm {
+    position: relative;
+    border-radius: 0.75em;
+    left: -0.375em; /* -(0.75em / 2) */
+  }
+}

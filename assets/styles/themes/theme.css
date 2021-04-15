@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #0065fc;
+  --secondary-color: #deebff;
+  --background-accent-color: #f2f2f2;
+  --background-color: #fff;
+  --text-color: #000;
+  --shadow-color: #cacaca;
+
+  --font-family: "Raleway", sans-serif;
+}
