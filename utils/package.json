@@ -1,0 +1,14 @@
+{
+  "name": "oc-fe-p02-img-resizer",
+  "version": "1.0.0",
+  "description": "Permet de faire une première réduction de la taille (width) des images fournies en fonction de ce dont la page HTML a besoin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khyonn",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "0.28.3"
+  }
+}
